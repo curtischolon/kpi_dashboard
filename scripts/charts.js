@@ -38,16 +38,16 @@ google.charts.setOnLoadCallback(drawChart2);
 
 function drawChart2() {
     var data = google.visualization.arrayToDataTable([
-        ['Category', 'Under', 'Ok', 'Over', {role: 'annotation'}],
-        ['Atlanta', 10, 80, 10, ''],
-        ['San Antonio', 20, 70, 10, ''],
-        ['Jackson', 10, 70, 20, ''],
-        ['Fife', 40, 50, 10, ''],
-        ['Ontario', 30, 50, 20, ''],
-        ['Salt Lake', 25, 70, 5, ''],
-        ['Hawaii', 0, 100, 0, ''],
-        ['Alaska', 5, 95, 0, ''],
-        ['ALL', 20, 70, 10, '']
+        ['Category', 'N', 'Y', {role: 'annotation'}],
+        ['Atlanta', 10, 90, ''],
+        ['San Antonio', 20, 80,''],
+        ['Jackson', 10, 90, ''],
+        ['Fife', 40, 60, ''],
+        ['Ontario', 30, 70, ''],
+        ['Salt Lake', 25, 75, ''],
+        ['Hawaii', 0, 100, ''],
+        ['Alaska', 5, 95,''],
+        ['ALL', 20, 80, '']
     ]);
 
     var options = {
@@ -104,7 +104,7 @@ function drawLineChart() {
     data.addColumn('number', 'Week');
     data.addColumn('number', 'Stores Not Serviced');
     data.addColumn('number', 'Not Serviced On Time');
-    data.addColumn('number', 'Questionable Hours Total');
+    data.addColumn('number', 'Questionable Hours Over');
     data.addColumn('number', 'Questionable Hours Under');
 
     data.addRows([
