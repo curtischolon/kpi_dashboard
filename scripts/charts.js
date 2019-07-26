@@ -133,3 +133,31 @@ function drawLineChart() {
     var chart = new google.charts.Line(document.getElementById('chart-trending'));
     chart.draw(data, google.charts.Line.convertOptions(options));
 }
+
+
+// Quality
+google.charts.load('current', {packages: ['corechart']});
+google.charts.setOnLoadCallback(drawChart4);
+
+function drawChart4() {
+    var data = google.visualization.arrayToDataTable([
+        ['Category', 'Score', {role: 'annotation'}],
+        ['Atlanta', 4, ''],
+        ['San Antonio', 3, ''],
+        ['Jackson', 3.5, ''],
+        ['Fife', 4.2, ''],
+        ['Ontario', 2, ''],
+        ['Salt Lake', 3, ''],
+        ['Hawaii', 4.5, ''],
+        ['Alaska', 5, ''],
+        ['ALL', 3.75, '']
+    ]);
+
+    var options = {
+        title: 'Quality Score',
+        legend: {position: 'top', maxlines: 3},
+        bar: {groupWidth: '50%'},
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById("chart-quality"));
+    chart.draw(data, options);
+}
