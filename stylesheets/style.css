@@ -1,31 +1,81 @@
-*,
-*::before,
-*::after{
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .grid-container {
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 5rem 1fr 50px;
     grid-template-areas:
-    "nav header"
+    "header header"
     "nav main"
     "footer footer";
 }
 
 .header {
-    grid-area: "header";
+    grid-area: header;
     text-align: center;
-    width: 100%;
+    background-color: rgb(175, 174, 174);
+    color: rgb(85, 85, 85);
+    font-size: 3rem;
+    font-weight: 700;
 }
 
 .nav {
-    grid-area: "nav";
+    grid-area: nav;
+    background-color: #444;
+}
+
+.main {
+    grid-area: main;
 }
 
 .footer {
-    grid-area: "footer";
+    grid-area: footer;
+    background-color: #444;
 }
+
+.nav ul li {
+    list-style: none;
+    font-size: 1rem;
+    line-height: 3rem;
+    border: solid 0.5px #333;
+}
+
+.nav a {
+    display: block;
+    padding-left: 1.5rem;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ddd;
+}
+
+.nav a:visited {
+    color: #aaa;
+}
+
+.nav a:active {
+    color: #999;
+    background-color: black;
+}
+
+.nav a:hover {
+    background-color: #222;
+}
+
+.main {
+    background-color: #eee;
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
