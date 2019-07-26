@@ -79,5 +79,10 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.serviced {
+    grid-column: 1;
+    max-width: 1fr;
+}
+
 
 
