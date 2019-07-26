@@ -17,7 +17,7 @@ body {
     grid-template-areas:
     "header header"
     "nav main"
-    "footer footer";
+    "nav main";
 }
 
 .header {
@@ -75,14 +75,19 @@ body {
 .main {
     background-color: #eee;
     display: grid;
-    grid-gap: 1vw;
+    grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
 }
 
-.serviced {
-    grid-column: 1;
-    max-width: 1fr;
+.col-chart {
+    width: 95%;
+    height: 95%;
+    justify-self: center;
 }
 
-
-
+.chart-trending {
+    grid-column: 1 /3;
+}
