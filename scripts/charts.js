@@ -161,3 +161,11 @@ function drawChart4() {
     var chart = new google.visualization.ColumnChart(document.getElementById("chart-quality"));
     chart.draw(data, options);
 }
+
+window.onresize = function() {
+    drawChart1();
+    drawChart2();
+    drawChart3();
+    drawChart4();
+    drawLineChart();
+};
