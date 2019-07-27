@@ -82,9 +82,15 @@ body {
     justify-content: center;
 }
 
-.col-chart {
-    width: 95%;
-    height: 95%;
+.chart-container {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
     justify-self: center;
 }
 
